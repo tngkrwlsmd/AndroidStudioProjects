@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Text1"
+        android:text="선택을 하시겠습니까?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+    <CheckBox
+        android:id="@+id/ChkAgree"
+        android:text="시작함"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/Text2"
+        android:text="좋아하는 애완동물은?"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Rgroup1"
+        android:visibility="invisible">
+        <RadioButton
+            android:id="@+id/RdoDog"
+            android:text="강아지"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            tools:ignore="HardcodedText" />
+        <RadioButton
+            android:id="@+id/RdoCat"
+            android:text="고양이"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            tools:ignore="HardcodedText" />
+        <RadioButton
+            android:id="@+id/RdoRabbit"
+            android:text="토끼"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtnOK"
+        android:text="선택 완료"
+        android:visibility="invisible"
+        tools:ignore="HardcodedText" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ImaPet"
+        android:visibility="invisible"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+</LinearLayout>

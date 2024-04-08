@@ -17,20 +17,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/button2"
         android:text="@string/strBtn2"
-        style="?android:attr/buttonBarButtonStyle"></Button>
+        style="?android:attr/buttonBarButtonStyle" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button3"
         android:text="@string/strBtn3"
-        style="?android:attr/buttonBarButtonStyle"></Button>
+        style="?android:attr/buttonBarButtonStyle" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button4"
         android:text="@string/strBtn4"
-        style="?android:attr/buttonBarButtonStyle"></Button>
+        style="?android:attr/buttonBarButtonStyle" />
 
 </LinearLayout>
