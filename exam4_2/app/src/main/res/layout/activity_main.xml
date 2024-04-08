@@ -9,7 +9,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00ff00"
+        android:background="#FF00FF00"
         android:text="버튼 1"
         android:layout_margin="20dp"
         tools:ignore="HardcodedText,TextContrastCheck" />
