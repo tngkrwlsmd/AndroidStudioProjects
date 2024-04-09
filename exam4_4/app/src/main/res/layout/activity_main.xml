@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text1"
+        android:text="선택을 하시겠습니까?"
+        tools:ignore="HardcodedText" />
+
+    <Switch
+        android:id="@+id/SwAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택함"
+        tools:ignore="HardcodedText,UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/Text2"
+        android:text="좋아하는 안드로이드 버전은?"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Rgroup1"
+        android:visibility="invisible">
+        <RadioButton
+            android:id="@+id/And12"
+            android:text="S(12.0)"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            tools:ignore="HardcodedText" />
+        <RadioButton
+            android:id="@+id/And13"
+            android:text="T(13.0)"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            tools:ignore="HardcodedText" />
+        <RadioButton
+            android:id="@+id/And14"
+            android:text="U(14.0)"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ImaAnd"
+        android:visibility="invisible"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Exit"
+        android:text="종료"
+        android:padding="10dp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Reset"
+        android:text="처음으로"
+        android:padding="10dp"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
