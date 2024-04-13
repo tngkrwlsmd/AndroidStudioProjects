@@ -1,18 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TableRow tools:ignore="UselessParent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/Edit1"
+            android:layout_span="5"
+            android:autofillHints=""
+            android:hint="숫자1 입력"
+            tools:ignore="HardcodedText,TextFields,TextContrastCheck">
+        </EditText>
+    </TableRow>
+
+    <TableRow tools:ignore="UselessParent">
+
+        <EditText
+            android:id="@+id/Edit2"
+            android:layout_span="5"
+            android:autofillHints=""
+            android:hint="숫자2 입력"
+            tools:ignore="HardcodedText,TextFields,TouchTargetSizeCheck">
+        </EditText>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/BtnNum0"
+            android:text="0"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/BtnNum1"
+            android:text="1"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/BtnNum2"
+            android:text="2"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/BtnNum3"
+            android:text="3"
+            tools:ignore="ButtonStyle,HardcodedText" />
+        <Button
+            android:id="@+id/BtnNum4"
+            android:text="4"
+            tools:ignore="ButtonStyle,HardcodedText" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/BtnNum5"
+            android:text="5"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/BtnNum6"
+            android:text="6"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/BtnNum7"
+            android:text="7"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/BtnNum8"
+            android:text="8"
+            tools:ignore="ButtonStyle,HardcodedText" />
+        <Button
+            android:id="@+id/BtnNum9"
+            android:text="9"
+            tools:ignore="ButtonStyle,HardcodedText" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/BtnAdd"
+            android:layout_margin="5dp"
+            android:layout_span="5"
+            android:text="더하기"
+            tools:ignore="HardcodedText">
+        </Button>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/BtnSub"
+            android:layout_margin="5dp"
+            android:layout_span="5"
+            android:text="빼기"
+            tools:ignore="HardcodedText">
+        </Button>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/BtnMul"
+            android:layout_margin="5dp"
+            android:layout_span="5"
+            android:text="곱하기"
+            tools:ignore="HardcodedText">
+        </Button>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/BtnDiv"
+            android:layout_margin="5dp"
+            android:layout_span="5"
+            android:text="나누기"
+            tools:ignore="HardcodedText">
+        </Button>
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/TextResult"
+            android:layout_margin="5dp"
+            android:layout_span="5"
+            android:text="계산 결과 : "
+            android:textColor="#FF0000"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+    </TableRow>
+
+</TableLayout>
