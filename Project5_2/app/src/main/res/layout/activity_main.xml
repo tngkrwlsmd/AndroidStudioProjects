@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TableRow tools:ignore="UselessParent">
+    <TableRow>
 
         <EditText
             android:id="@+id/Edit1"
