@@ -1,18 +1,168 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Chronometer
+            android:id="@+id/chronometer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format="예약에 걸린 시간 %s"
+            android:gravity="center"
+            android:textSize="20dp"
+            tools:ignore="SpUsage,TextSizeCheck">
+        </Chronometer>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdoCal"
+            android:text="날짜 설정"
+            tools:ignore="HardcodedText">
+        </RadioButton>
+
+        <RadioButton
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdoTime"
+            android:text="시간 설정"
+            tools:ignore="HardcodedText">
+        </RadioButton>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:ignore="InefficientWeight">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <DatePicker
+                android:visibility="invisible"
+                android:id="@+id/datePicker1"
+                android:datePickerMode="spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </DatePicker>
+
+            <TimePicker
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker1">
+            </TimePicker>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvYear"
+            android:text="0000"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="년"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMonth"
+            android:text="00"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="월"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDay"
+            android:text="00"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvHour"
+            android:text="00"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMinute"
+            android:text="00"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="분 예약됨"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText">
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>
