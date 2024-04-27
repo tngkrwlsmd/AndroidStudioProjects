@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         dPicker.setOnDateChangedListener((view, year, month, dayOfMonth) -> {
             selectYear = year;
-            selectMonth = month;
+            selectMonth = month + 1;
             selectDay = dayOfMonth;
         });
 
