@@ -69,14 +69,14 @@ public class MainActivity extends AppCompatActivity {
 
         calView.setOnDateChangeListener((view, year, month, dayOfMonth) -> {
             selectYear = year;
-            selectMonth = month;
+            selectMonth = month + 1;
             selectDay = dayOfMonth;
         });
 
         tvYear.setText(Integer.toString(selectYear));
         tvMonth.setText(Integer.toString(selectMonth));
         tvDay.setText(Integer.toString(selectDay));
-        tvHour.setText(Integer.toString(tPicker.getCurrentHour()));
-        tvMinute.setText(Integer.toString(tPicker.getCurrentMinute()));
+        tvHour.setText(Integer.toString(tPicker.getHour()));
+        tvMinute.setText(Integer.toString(tPicker.getMinute()));
     }
 }
