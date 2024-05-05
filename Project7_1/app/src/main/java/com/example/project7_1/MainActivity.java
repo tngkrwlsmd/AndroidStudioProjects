@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setSupportActionBar(findViewById(R.id.toolbar));
         setTitle("배경색 바꾸기");
         baseLayout = findViewById(R.id.baseLayout);
         button1 = findViewById(R.id.button1);
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             baseLayout.setBackgroundColor(Color.RED);
             return true;
         } else if (item.getItemId() == R.id.itemGreen) {
-            baseLayout.setBackgroundColor(Color.BLUE);
+            baseLayout.setBackgroundColor(Color.GREEN);
             return true;
         } else if (item.getItemId() == R.id.itemBlue) {
             baseLayout.setBackgroundColor(Color.BLUE);

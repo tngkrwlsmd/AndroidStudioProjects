@@ -6,16 +6,24 @@
     android:id="@+id/baseLayout"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="오른쪽 위 메뉴 버튼을 누르세요"
-        tools:ignore="HardcodedText" />
+        android:textSize="25dp"
+        tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
         android:text="이건 버튼"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:layout_gravity="center"/>
 </LinearLayout>
