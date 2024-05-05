@@ -32,10 +32,6 @@ public class MainActivity extends AppCompatActivity {
             dlg.setTitle("사용자 정보 입력");
             dlg.setIcon(R.drawable.ic_launcher_foreground);
             dlg.setView(diglogView);
-            dlg.setPositiveButton("확인", null);
-            dlg.setNegativeButton("취소", null);
-            dlg.show();
-
             dlg.setPositiveButton("확인", (dialogInterface, i) -> {
                 dlgEdtName = diglogView.findViewById(R.id.dlgEdt1);
                 dlgEdtEmail = diglogView.findViewById(R.id.dlgEdt2);
@@ -52,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 toast.setView(toastView);
                 toast.show();
             });
+            dlg.show();
         });
     }
 }
