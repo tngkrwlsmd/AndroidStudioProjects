@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/baseLayout"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_alignLeft="@+id/toolbar"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="각도 입력 : "
+        android:textSize="25dp"
+        tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1"
+        android:id="@+id/editRotate"
+        android:textSize="25dp"
+        tools:ignore="Autofill,LabelFor,RtlHardcoded,SpUsage,TextFields,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:id="@+id/imgJeju"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item0"
+        android:title="그림 회전"
+        tools:ignore="HardcodedText">
+    </item>
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item1"
+            android:title="한라산"
+            tools:ignore="HardcodedText">
+        </item>
+        <item
+            android:id="@+id/item2"
+            android:title="추자도"
+            tools:ignore="HardcodedText">
+        </item>
+        <item
+            android:id="@+id/item3"
+            android:title="범섬"
+            tools:ignore="HardcodedText">
+        </item>
+    </group>
+
+</menu>
