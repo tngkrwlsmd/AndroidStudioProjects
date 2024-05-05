@@ -1,13 +1,15 @@
 package com.example.project7_2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout baseLayout;
@@ -35,5 +37,26 @@ public class MainActivity extends AppCompatActivity {
         if ( v == button2) {
             mInflater.inflate(R.menu.menu2, menu);
         }
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.itemRed) {
+            baseLayout.setBackgroundColor(Color.RED);
+            return true;
+        } else if (item.getItemId() == R.id.itemGreen) {
+            baseLayout.setBackgroundColor(Color.GREEN);
+            return true;
+        } else if (item.getItemId() == R.id.itemBlue) {
+            baseLayout.setBackgroundColor(Color.BLUE);
+            return true;
+        } else if (item.getItemId() == R.id.subRotate) {
+            button2.setRotation(45);
+            return true;
+        } else if (item.getItemId() == R.id.subSize) {
+            button2.setScaleX(2);
+            return true;
+        }
+        return false;
     }
 }

@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:gravity="center_horizontal"
-    android:id="@+id/baseLayout">
+    android:id="@+id/baseLayout"
+    android:orientation="vertical">
 
     <Button
         android:layout_width="wrap_content"
