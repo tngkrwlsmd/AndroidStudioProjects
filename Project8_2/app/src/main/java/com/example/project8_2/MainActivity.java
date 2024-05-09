@@ -1,6 +1,5 @@
 package com.example.project8_2;
 
-import android.Manifest;
 import android.os.Bundle;
 import android.os.Environment;
 import android.widget.Button;
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("간단 이미지 뷰어");
         ActivityCompat.requestPermissions(this, new String[] {
-            Manifest.permission.WRITE_EXTERNAL_STORAGE}, MODE_PRIVATE);
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MODE_PRIVATE);
         btnPrev = findViewById(R.id.btnPrev);
         btnNext = findViewById(R.id.btnNext);
         myPicture = findViewById(R.id.myPrictureView1);
@@ -60,6 +59,5 @@ public class MainActivity extends AppCompatActivity {
                 myPicture.invalidate();
             }
         });
-
     }
 }
