@@ -1,14 +1,17 @@
 package com.example.exam8_2;
 
 import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.io.File;
 import java.util.Arrays;
@@ -22,14 +25,34 @@ public class MainActivity extends AppCompatActivity {
     String imageFname;
     TextView imageCount;
 
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("간단 이미지 뷰어");
-        ActivityCompat.requestPermissions(this, new String[] {
-                android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MODE_PRIVATE);
+
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    MODE_PRIVATE);
+        } else startApp();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == MODE_PRIVATE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                startApp();
+            } else {
+                Toast.makeText(this, "파일 권한을 허용해야 앱을 사용할 수 있습니다.", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void startApp() {
         btnPrev = findViewById(R.id.btnPrev);
         btnNext = findViewById(R.id.btnNext);
         myPicture = findViewById(R.id.myPrictureView1);
@@ -69,4 +92,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
