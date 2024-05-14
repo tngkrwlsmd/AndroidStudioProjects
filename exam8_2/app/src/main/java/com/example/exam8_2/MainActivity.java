@@ -64,33 +64,32 @@ public class MainActivity extends AppCompatActivity {
                 imageFiles = Arrays.copyOf(imageFiles, imageFiles.length + 1);
                 imageFiles[imageFiles.length - 1] = allFile;
             }
-            imageFname = imageFiles[curNum].toString();
-            myPicture.imagePath = imageFname;
         }
 
-        imageCount.setText(curNum + 1 + "/" + imageFiles.length);
+        if (imageFiles.length > 0) {
+            imageFname = imageFiles[curNum].toString();
+            myPicture.imagePath = imageFname;
+            imageCount.setText((curNum + 1) + "/" + imageFiles.length);
+        }
 
         btnPrev.setOnClickListener(v -> {
-            if (curNum <= 0) Toast.makeText(getApplicationContext(), "첫번째 그림입니다", Toast.LENGTH_SHORT).show();
-            else {
-                curNum--;
+            if (imageFiles.length > 0) {
+                curNum = (curNum - 1 + imageFiles.length) % imageFiles.length;
                 imageFname = imageFiles[curNum].toString();
                 myPicture.imagePath = imageFname;
                 myPicture.invalidate();
-                imageCount.setText(curNum + 1 + "/" + imageFiles.length);
+                imageCount.setText((curNum + 1) + "/" + imageFiles.length);
             }
         });
 
         btnNext.setOnClickListener(v -> {
-            if (curNum >= imageFiles.length - 1) Toast.makeText(getApplicationContext(), "마지막 그림입니다", Toast.LENGTH_SHORT).show();
-            else {
-                curNum++;
+            if (imageFiles.length > 0) {
+                curNum = (curNum + 1) % imageFiles.length;
                 imageFname = imageFiles[curNum].toString();
                 myPicture.imagePath = imageFname;
                 myPicture.invalidate();
-                imageCount.setText(curNum + 1 + "/" + imageFiles.length);
+                imageCount.setText((curNum + 1) + "/" + imageFiles.length);
             }
         });
     }
-
 }
