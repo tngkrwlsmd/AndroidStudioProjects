@@ -13,13 +13,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
-    final static int LINE = 1, CIRCLE = 2, RECTANGLE = 3;
-    static int curShape = LINE;
+    final static int LINE = 1, CIRCLE = 2, RECTANGLE = 3, RED = 4, GREEN = 5, BLUE = 6;
+    static int curShape = LINE, curColor = RED;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +76,18 @@ public class MainActivity extends AppCompatActivity {
             paint.setAntiAlias(true);
             paint.setStrokeWidth(5);
             paint.setStyle(Paint.Style.STROKE);
-            paint.setColor(Color.RED);
+
+            switch (curColor) {
+                case RED:
+                    paint.setColor(Color.RED);
+                    break;
+                case GREEN:
+                    paint.setColor(Color.GREEN);
+                    break;
+                case BLUE:
+                    paint.setColor(Color.BLUE);
+                    break;
+            }
 
             switch (curShape) {
                 case LINE:
@@ -86,7 +98,8 @@ public class MainActivity extends AppCompatActivity {
                     canvas.drawCircle(startX, startY, radius, paint);
                     break;
                 case RECTANGLE:
-
+                    canvas.drawRect(startX, startY, stopX, stopY, paint);
+                    break;
             }
         }
     }
@@ -97,6 +110,11 @@ public class MainActivity extends AppCompatActivity {
         menu.add(0,1,0,"선 그리기");
         menu.add(0,2,0,"원 그리기");
         menu.add(0, 3, 0, "사각형 그리기");
+
+        SubMenu subMenu = menu.addSubMenu("색상 변경 >>");
+        subMenu.add(0,4,0, "빨강");
+        subMenu.add(0,5,0, "초록");
+        subMenu.add(0,6,0, "파랑");
         return true;
     }
 
@@ -111,6 +129,15 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case 3:
                 curShape = RECTANGLE;
+                return true;
+            case 4:
+                curColor = RED;
+                return true;
+            case 5:
+                curColor = GREEN;
+                return true;
+            case 6:
+                curColor = BLUE;
                 return true;
         }
         return super.onOptionsItemSelected(item);
