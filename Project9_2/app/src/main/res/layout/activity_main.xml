@@ -18,14 +18,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ibZoomin"
-            android:src="@drawable/pointer_zoom_in"
+            android:src="@drawable/zoom_in"
             android:importantForAccessibility="no" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ibZoomout"
-            android:src="@drawable/pointer_zoom_out"
+            android:src="@drawable/zoom_out"
             android:importantForAccessibility="no" />
 
         <ImageButton
@@ -33,21 +33,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            android:src="@drawable/ic_menu_rotate"
+            android:src="@drawable/rotate"
             tools:ignore="ImageContrastCheck" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ibBright"
-            android:src="@drawable/pointer_zoom_in"
+            android:src="@drawable/bright"
             android:importantForAccessibility="no" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ibDark"
-            android:src="@drawable/pointer_zoom_out"
+            android:src="@drawable/dark"
             android:importantForAccessibility="no" />
 
         <ImageButton
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            android:src="@drawable/ic_menu_revert"
+            android:src="@drawable/gray"
             tools:ignore="ImageContrastCheck" />
     </LinearLayout>
 
