@@ -7,23 +7,32 @@ import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
+
+    private final Map<Integer, Class<?>> activityMap = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        activityMap.put(R.id.Second, SecondActivity.class);
+        activityMap.put(R.id.Third, ThirdActivity.class);
+
         RadioGroup radio = findViewById(R.id.Radio);
 
         Button btnNewActivity = findViewById(R.id.btnNewActivity);
         btnNewActivity.setOnClickListener(v -> {
             int check = radio.getCheckedRadioButtonId();
-            Intent intent = null;
-            if (check == R.id.Second) intent = new Intent(getApplicationContext(), SecondActivity.class);
-            else if (check == R.id.Third) intent = new Intent(getApplicationContext(), ThirdActivity.class);
+            Class<?> activityClass = activityMap.get(check);
 
-            if (intent != null) startActivity(intent);
+            if (activityClass != null) {
+                Intent intent = new Intent(getApplicationContext(), activityClass);
+                startActivity(intent);
+            }
         });
     }
 }
