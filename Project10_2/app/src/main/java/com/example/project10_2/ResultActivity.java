@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
-public class ResultActivity  extends Activity {
+public class ResultActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

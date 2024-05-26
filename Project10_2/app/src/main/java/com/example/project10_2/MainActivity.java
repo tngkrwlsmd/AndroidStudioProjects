@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
             intent.putExtra("VoteCount", voteCount);
             intent.putExtra("ImageName", imgName);
+            startActivity(intent);
         });
     }
 }
