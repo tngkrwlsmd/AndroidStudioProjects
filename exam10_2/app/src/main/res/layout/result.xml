@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:stretchColumns="0"
+        tools:ignore="UselessParent">
+        <TableRow>
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_gravity="center_vertical"
+                android:text="독서하는 소녀"
+                tools:ignore="HardcodedText" />
+            <RatingBar
+                android:id="@+id/rbar1"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_gravity="center_vertical"
+                android:text="꽃장식 모자 소녀"
+                tools:ignore="HardcodedText" />
+            <RatingBar
+                android:id="@+id/rbar2"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_gravity="center_vertical"
+                android:text="부채를 든 소녀"
+                tools:ignore="HardcodedText" />
+            <RatingBar
+                android:id="@+id/rbar3"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_gravity="center_vertical"
+                android:text="아레느깡 단 베르앙"
+                tools:ignore="HardcodedText" />
+            <RatingBar
+                android:id="@+id/rbar4"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_gravity="center_vertical"
+                android:text="잠자는 소녀"
+                tools:ignore="HardcodedText" />
+            <RatingBar
+                android:id="@+id/rbar5"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_gravity="center_vertical"
+                android:text="테라스의 두 자매"
+                tools:ignore="HardcodedText" />
+            <RatingBar
+                android:id="@+id/rbar6"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_gravity="center_vertical"
+                android:text="피아노 레슨"
+                tools:ignore="HardcodedText" />
+            <RatingBar
+                android:id="@+id/rbar7"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_gravity="center_vertical"
+                android:text="피아노 앞의 소녀들"
+                tools:ignore="HardcodedText" />
+            <RatingBar
+                android:id="@+id/rbar8"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_gravity="center_vertical"
+                android:text="해변에서"
+                tools:ignore="HardcodedText" />
+            <RatingBar
+                android:id="@+id/rbar9"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnReturn"
+                android:layout_span="2"
+                android:text="돌아가기"
+                tools:ignore="HardcodedText" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
